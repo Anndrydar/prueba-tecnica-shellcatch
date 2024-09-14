@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div *ngFor="let u of users.results; let i = index" class="col-12 col-sm-6 col-md-4">
+      <div class="card custom-card">
+        <div class="card-img-wrapper">
+          <img src="{{u.picture.large}}" class="card-img-top rounded-circle mx-auto" alt="User picture">
+        </div>
+        <div class="card-body text-center">
+          <div class="button-group d-flex justify-content-between align-items-center mb-3">
+            <a class="btn icon-btn" (click)="showContent(i, 'perfil')">
+              <img src="./assets/usuario.png" height="20px" alt="Cambiar usuario">
+            </a>
+            <a class="btn icon-btn" (click)="showContent(i, 'email')">
+              <img src="./assets/email.png" height="20px" alt="Cambiar email">
+            </a>
+            <a class="btn icon-btn" (click)="showContent(i, 'naci')">
+              <img src="./assets/globo.png" height="20px" alt="Cambiar fecha de nacimiento">
+            </a>
+            <a class="btn icon-btn" (click)="showContent(i, 'direccion')">
+              <img src="./assets/localizacion.png" height="20px" alt="Cambiar dirección">
+            </a>
+            <a class="btn icon-btn" (click)="showContent(i, 'phone')">
+              <img src="./assets/ring-phone.png" height="20px" alt="Cambiar teléfono">
+            </a>
+            <a class="btn icon-btn" (click)="showContent(i, 'password')">
+              <img src="./assets/candado-de-seguridad.png" height="20px" alt="Cambiar contraseña">
+            </a>
+          </div>
+          <div *ngIf="selectedUserIndex === i">
+            <div *ngIf="contentType === 'perfil'" class="dynamic-content">
+              <p><strong>Mi nombre es </strong></p>
+              <p>Nombre: {{u.name.title}} {{u.name.first}} {{u.name.last}}</p>
+            </div>
+            <div *ngIf="contentType === 'email'" class="dynamic-content">
+              <p><strong>Mi correo electronico es</strong></p>
+              <p>{{u.email}}.</p>
+            </div>
+            <div *ngIf="contentType === 'naci'" class="dynamic-content">
+              <p><strong>Mi cumpleaños es</strong></p>
+              <p>{{u.dob.date | date:'yyyy-MM-dd'}}.</p>
+            </div>
+            <div *ngIf="contentType === 'direccion'" class="dynamic-content">
+              <p><strong>Mi direccion es</strong></p>
+              <p>{{u.location.street.number}} {{u.location.street.name}}</p>
+            </div>
+            <div *ngIf="contentType === 'phone'" class="dynamic-content">
+              <p><strong>Mi numero de telefono es</strong></p>
+              <p>{{u.phone}}</p>
+            </div>
+            <div *ngIf="contentType === 'password'" class="dynamic-content">
+              <p><strong>Mi contraseña es</strong></p>
+              <p>{{u.login.password}}</p>
+            </div>
+          </div>
+          <a class="btn icon-btn" (click)="actualizaruser()">
+            <img src="./assets/cambio.png" height="20px">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

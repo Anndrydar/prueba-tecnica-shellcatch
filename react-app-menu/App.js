@@ -1,19 +1,12 @@
-// App.js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import LoginScreen from './screens/loginScreen';
 
 const Tab = createBottomTabNavigator();
 
-function LoginScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Login</Text>
-    </View>
-  );
-}
 
 function JokesScreen() {
   return (

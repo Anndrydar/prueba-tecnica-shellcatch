@@ -4,17 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import LoginScreen from './screens/loginScreen';
+import JokeScreen from './screens/jokesScreen';
 
 const Tab = createBottomTabNavigator();
-
-
-function JokesScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Jokes</Text>
-    </View>
-  );
-}
 
 function WifiScreen() {
   return (
@@ -48,7 +40,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Login" component={LoginScreen} />
-        <Tab.Screen name="Jokes" component={JokesScreen} />
+        <Tab.Screen name="Jokes" component={JokeScreen} />
         <Tab.Screen name="WiFi" component={WifiScreen} />
       </Tab.Navigator>
     </NavigationContainer>

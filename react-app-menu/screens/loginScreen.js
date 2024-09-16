@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
+
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Iniciar Sesión</Text>
+      <Text style={styles.title}>Iniciar sesion</Text>
 
-      {/* Campo de Correo Electrónico */}
       <TextInput
-        label="Correo Electrónico"
+        label ={"Correo electronico"}
         value={email}
         onChangeText={setEmail}
         style={styles.input}
@@ -20,9 +20,8 @@ export default function LoginScreen() {
         left={<TextInput.Icon name="email-outline" />}
       />
 
-      {/* Campo de Contraseña */}
       <TextInput
-        label="Contraseña"
+        label={"Contraseña"}
         value={password}
         onChangeText={setPassword}
         style={styles.input}
@@ -31,24 +30,21 @@ export default function LoginScreen() {
         left={<TextInput.Icon name="lock-outline" />}
       />
 
-      {/* Botón para Iniciar Sesión */}
       <Button
         mode="contained"
         onPress={() => console.log('Logging in')}
         style={styles.button}
         labelStyle={styles.buttonText}
       >
-        Iniciar Sesión
+        Correo electronico
       </Button>
 
-      {/* Botón "Recuperar Contraseña" */}
       <TouchableOpacity style={styles.recoverButton} onPress={() => console.log('Recuperar contraseña')}>
-        <Text style={styles.recoverText}>Recuperar Contraseña</Text>
+        <Text style={styles.recoverText}>Recuperar contraseña</Text>
       </TouchableOpacity>
 
-      {/* Enlace "¿Olvidaste tu Contraseña?" */}
       <TouchableOpacity onPress={() => console.log('Olvidaste tu contraseña')}>
-        <Text style={styles.forgotText}>¿Olvidaste tu contraseña?</Text>
+        <Text style={styles.forgotText}>Olvidastes tu contraseña ?</Text>
       </TouchableOpacity>
     </View>
   );
@@ -57,43 +53,45 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     justifyContent: 'center',
-    backgroundColor: '#f8f8f8',
+    paddingHorizontal: 20,
+    backgroundColor: '#f5f5f5',
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#6200EE',
-    marginBottom: 20,
     textAlign: 'center',
+    marginBottom: 20,
+    color: '#333',
   },
   input: {
     marginBottom: 20,
     backgroundColor: 'white',
   },
   button: {
-    backgroundColor: '#6200EE',
-    paddingVertical: 8,
+    backgroundColor: '#6200ee',
+    paddingVertical: 10,
     borderRadius: 5,
+    marginBottom: 10,
   },
   buttonText: {
+    color: 'white',
     fontSize: 16,
-    color: '#fff',
+    fontWeight: 'bold',
   },
   recoverButton: {
-    marginTop: 15,
     alignItems: 'center',
+    marginTop: 10,
   },
   recoverText: {
-    color: '#6200EE',
-    fontSize: 16,
+    color: '#6200ee',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
   forgotText: {
-    marginTop: 10,
     textAlign: 'center',
-    color: 'gray',
+    color: '#999',
+    marginTop: 10,
     fontSize: 14,
-    textDecorationLine: 'underline',
   },
 });

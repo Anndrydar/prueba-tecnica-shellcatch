@@ -1,5 +1,9 @@
 {
   "expo": {
+    "plugins": [
+      "react-native-wifi-reborn",
+      "expo-localization"
+    ],
     "name": "react-app-menu",
     "slug": "react-app-menu",
     "version": "1.0.0",
@@ -15,10 +19,15 @@
       "supportsTablet": true
     },
     "android": {
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.example.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

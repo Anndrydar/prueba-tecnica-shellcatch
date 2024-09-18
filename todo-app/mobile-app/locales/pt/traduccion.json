@@ -1,0 +1,9 @@
+{
+    "task_description": "Descrição da tarefa",
+    "save": "Salvar",
+    "complete_task": "Completar tarefa",
+    "delete_task": "Excluir tarefa",
+    "error_msg": "Por favor, preencha o campo de descrição.",
+    "Tarea": "Tarefa",
+    "Ajustes": "Configurações"
+  }  

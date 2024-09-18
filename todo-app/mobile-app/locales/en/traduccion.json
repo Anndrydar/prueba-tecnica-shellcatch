@@ -1,0 +1,9 @@
+{
+    "task_description": "Task Description",
+    "save": "Save",
+    "complete_task": "Complete Task",
+    "delete_task": "Delete Task",
+    "error_msg": "Please fill in the description field.",
+     "Tarea": "Task",
+     "Ajustes": "Settings"
+  }  

@@ -1,0 +1,9 @@
+{
+    "task_description": "Descripción de tarea",
+    "save": "Guardar",
+    "complete_task": "Completar tarea",
+    "delete_task": "Eliminar tarea",
+    "error_msg": "Por favor, rellene el campo de descripción.",
+    "Tarea": "Tarea",
+    "Ajustes": "Ajustes"
+  }  

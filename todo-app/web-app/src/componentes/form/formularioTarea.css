@@ -1,0 +1,116 @@
+/* Formulario */
+.main-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .input-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  textarea.input-control {
+    resize: none;
+    height: 60px; /* Ajusta el tamaño para que sea pequeño */
+  }
+  
+  .errorMsg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+/* Estilo del contenedor principal */
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+    justify-items: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilo de las tarjetas */
+  .task-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #e0e0e0; /* Borde ligero para separación */
+    margin-bottom: 20px; /* Espacio en la parte inferior de cada tarjeta */
+  }
+  
+  /* Efecto hover en la tarjeta */
+  .task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Estilo del texto dentro de la tarjeta */
+  .task-card p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  /* Estilo de los botones dentro de la tarjeta */
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .check-btn,
+  .delete-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .check-btn:hover {
+    background-color: #28a745;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .task-card {
+      width: 100%;
+      max-width: 100%;
+    }
+  }  

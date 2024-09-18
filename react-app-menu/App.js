@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import LoginScreen from './screens/loginScreen';
 import JokeScreen from './screens/jokesScreen';
-import WifiScreen from './screens/wifiScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,8 +19,6 @@ export default function App() {
                 iconName = 'log-in-outline';
               } else if (route.name === 'Jokes') {
                 iconName = 'happy-outline';
-              } else if (route.name === 'WiFi') {
-                iconName = 'wifi-outline';
               }
 
               return <Ionicons name={iconName} size={size} color={color} />;
@@ -33,7 +30,6 @@ export default function App() {
         >
           <Tab.Screen name="Login" component={LoginScreen} />
           <Tab.Screen name="Jokes" component={JokeScreen} />
-          <Tab.Screen name="WiFi" component={WifiScreen} />
         </Tab.Navigator>
       </NavigationContainer>
   );

@@ -33,6 +33,7 @@ const FormularioTarea = () => {
         setTasks([...tasks, response.data]);
         setDescripcion('');
         setErrorMsg('');
+        window.location.reload();
       } catch (error) {
         console.error('Error al guardar la tarea:', error);
       }
@@ -44,7 +45,7 @@ const FormularioTarea = () => {
   const handleCheckTask = async (idtarea) => {
     try {
       await axios.put(`${URL}/completar/${idtarea}`);
-      fetchTasks(); // Actualiza la lista de tareas
+      fetchTasks();
     } catch (error) {
       console.error('Error al actualizar la tarea:', error);
     }

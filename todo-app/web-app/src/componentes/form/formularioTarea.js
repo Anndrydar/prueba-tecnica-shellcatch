@@ -90,7 +90,7 @@ const FormularioTarea = () => {
                   rows={2}
                   name="descripcion"
                   value={descripcion}
-                  placeholder="Ingrese la descripción de la tarea"
+                  placeholder="Descripción de tarea"
                   onChange={handleInputChange}
                 />
               </Form.Group>

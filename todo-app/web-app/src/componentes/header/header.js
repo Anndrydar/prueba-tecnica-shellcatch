@@ -7,6 +7,11 @@ const Header = () => {
     <header>
       <h1>Administración de tareas</h1>
       <hr />
+      <div className="links">
+        <NavLink to="/add" className="link" activeClassName="active">
+          Agregar tarea
+        </NavLink>
+      </div>
     </header>
   );
 };

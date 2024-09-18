@@ -26,7 +26,7 @@ export default function JokeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Chiste</Text>
+      <Text style={styles.titulo}>Chiste...</Text>
       <FlatList
         data={joks}
         keyExtractor={item => item.id}

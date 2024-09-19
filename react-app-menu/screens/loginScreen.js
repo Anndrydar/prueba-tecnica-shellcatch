@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Solo una vez la importación de React
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
-
+import { useTranslation } from 'react-i18next';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { t } = useTranslation(); // Accediendo a las traducciones
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Iniciar sesion</Text>
+      <Text style={styles.title}>{t('Iniciar Sesion')}</Text>
 
       <TextInput
-        label ={"Correo electronico"}
+        label={t("Correo electronico")}
         value={email}
         onChangeText={setEmail}
         style={styles.input}
@@ -21,7 +22,7 @@ export default function LoginScreen() {
       />
 
       <TextInput
-        label={"Contraseña"}
+        label={t("Contraseña")}
         value={password}
         onChangeText={setPassword}
         style={styles.input}
@@ -32,19 +33,19 @@ export default function LoginScreen() {
 
       <Button
         mode="contained"
-        onPress={() => console.log('Logging in')}
+        onPress={() => console.log(t('Iniciar Sesion'))}
         style={styles.button}
         labelStyle={styles.buttonText}
       >
-        Correo electronico
+        {t('Iniciar Sesion')}
       </Button>
 
-      <TouchableOpacity style={styles.recoverButton} onPress={() => console.log('Recuperar contraseña')}>
-        <Text style={styles.recoverText}>Recuperar contraseña</Text>
+      <TouchableOpacity style={styles.recoverButton} onPress={() => console.log(t('Recuperar Contraseña'))}>
+        <Text style={styles.recoverText}>{t('Recuperar Contraseña')}</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => console.log('Olvidaste tu contraseña')}>
-        <Text style={styles.forgotText}>Olvidastes tu contraseña ?</Text>
+      <TouchableOpacity onPress={() => console.log(t('Olvidates tu contraseña'))}>
+        <Text style={styles.forgotText}>{t('Olvidates tu contraseña')}?</Text>
       </TouchableOpacity>
     </View>
   );

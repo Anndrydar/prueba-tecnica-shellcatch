@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image } from 'react-native';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 export default function JokeScreen() {
+  const { t } = useTranslation();
   const [joks, setJoks] = useState([]);
 
   const api = () => {
@@ -26,7 +28,7 @@ export default function JokeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Chiste...</Text>
+      <Text style={styles.titulo}>{t('Chiste')}...</Text>
       <FlatList
         data={joks}
         keyExtractor={item => item.id}
